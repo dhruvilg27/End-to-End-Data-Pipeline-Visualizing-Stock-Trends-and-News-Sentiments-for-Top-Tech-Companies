@@ -1,4 +1,4 @@
-# Build an end-to-end automated data pipeline to visualise stock values of top 5 technology companies and how they are correlated with news article sentiments.
+# Create a fully automated end-to-end data pipeline to visualize the stock values of the top 5 technology companies and explore their correlation with sentiments extracted from news articles.
 
 ## Contents
 - [Problem statement and project description](#problem-statement-and-project-description)
