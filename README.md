@@ -1,7 +1,5 @@
 # Build an end-to-end automated data pipeline to visualise stock values of top 5 technology companies and how they are correlated with news article sentiments.
 
-This project is created by me for the [Data Engineering Zoomcamp 2023](https://github.com/DataTalksClub/data-engineering-zoomcamp).  
-
 ## Contents
 - [Problem statement and project description](#problem-statement-and-project-description)
 - [Technologies, tools and data sources used](#technologies-tools-and-data-sources-used)
@@ -167,41 +165,3 @@ This project can mainly be used for academic purposes and with a little bit of t
 - Further investigation 
   - Perhaps there is a delayed effect from the articles. We can apply time series day wise delay transformations to test correlations. It is possible the impact takes effect 1 or 2 days from the time the article was published. In the real world anyway it would take some time before an article or news becomes popular unless it is breaking news.
 
-
-## Scope for improvement 
-- The project considers only top 5 stocks by market cap. More stocks can be included in the project and bucketed into large, medium, and small and check if results are uniform across all.  
-  
-- Only technology stocks are considered in this project. Stocks from other sectors like retail, manufacturing, finance, real estate can also be investigated.  
-- The project can be tweaked to gain granular level insights with near real time reporting by using intraday data & scheduling pipeline runs with Prefect every hour.
-
-## Reviewing criteria  
-- Problem description – *The problem statement and project description is defined [here](#problem-statement-and-project-description).*  
-  
-  - 0 points: Problem is not described
-  - 1 point: Problem is described but shortly or not clearly
-  - 2 points: Problem is well described and it's clear what the problem the project solves    
-- Cloud – *GCP is used for data lake, data warehouse & dataproc cluster and is managed with Terraform.*
-  - 0 points: Cloud is not used, things run only locally
-  - 2 points: The project is developed in the cloud
-  - 4 points: The project is developed in the cloud and IaC tools are used  
-- Data ingestion (choose either batch or stream)  
-  - Batch / Workflow orchestration – *Batch processing of end-to-end pipeline with tasks/flows defined in Prefect and Prefect cloud used for orchestrating runs.*
-    - 0 points: No workflow orchestration
-    - 2 points: Partial workflow orchestration: some steps are orchestrated, some run manually
-    - 4 points: End-to-end pipeline: multiple steps in the DAG, uploading data to data lake
-- Data warehouse – *Big Query Datawarehouse used to store transformed table. Please note for the sake of optimization, partitioning and clustering is not used for this project as we are not dealing with large size datasets. The final transformed data is in MBs and as discussed in lecture videos it doesn’t make sense to apply table partitioning and clustering in such cases. Reference to lecture - https://youtu.be/-CqXf7vhhDs?t=136*
-  - 0 points: No DWH is used
-  - 2 points: Tables are created in DWH, but not optimized
-  - 4 points: Tables are partitioned and clustered in a way that makes sense for the upstream queries (with explanation)
-- Transformations (dbt, spark, etc) – *Spark is used for data transformations.*
-  - 0 points: No transformations
-  - 2 points: Simple SQL transformation (no dbt or similar tools)
-  - 4 points: Transformations are defined with dbt, Spark or similar technologies
-- Dashboard – *Dashboard is created with Looker studio. 3 charts/tiles created.*
-  - 0 points: No dashboard
-  - 2 points: A dashboard with 1 tile
-  - 4 points: A dashboard with 2 tiles
-- Reproducibility – *Documentation written in detail to include project description, pipeline diagram, pipeline explanation, clear steps to reproduce along with summary of findings and notes on scope for improvement.*
-  - 0 points: No instructions how to run code at all
-  - 2 points: Some instructions are there, but they are not complete
-  - 4 points: Instructions are clear, it's easy to run the code, and the code works
