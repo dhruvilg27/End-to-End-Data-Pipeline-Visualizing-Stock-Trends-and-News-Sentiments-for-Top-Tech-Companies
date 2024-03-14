@@ -150,7 +150,6 @@ This project can mainly be used for academic purposes and with a little bit of t
 `docker image rm de_zc`
 
 ## Dashboard and results 
-- You can access the dashboard [here](https://lookerstudio.google.com/reporting/ac1aeee7-3fcf-4be6-b443-3977f59b8fe7).    
 
 ![Dashboard Screenshot](https://user-images.githubusercontent.com/12958946/229422141-fc9ab605-6925-4f35-aef6-a352a03208a1.png)
 
